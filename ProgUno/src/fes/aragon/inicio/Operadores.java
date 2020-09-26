@@ -22,6 +22,9 @@ public class Operadores {
         condicion4 = k/m != u; // diferente
         condicion5 = !(k==10);// Lo que salga de adentro lo voy a negar 
         
+        // or || solo es falso cuando ambos sean falsos
+        //and && solo es verdadero cuando ambas sean verdaderos 
+        // k==1 && k==3 siemore sera falso a menos que lo negemos ! siempre sera verdadero
         
         System.out.println("Valor:"+ condicion);
         System.out.println("Valor:" + condicion1);
