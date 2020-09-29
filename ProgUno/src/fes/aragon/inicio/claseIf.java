@@ -8,6 +8,9 @@ public class claseIf {
         
         condicion = false;
         
+        //condicion == 10>8 FALSO compparo 
+        //condicion = 10>8 VERDADERO asigno 
+        
         if(condicion == 10>8)
         {
             System.out.println("Cuando la verdad es verdadera");
