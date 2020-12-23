@@ -1,16 +1,23 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package fes.aragon.impl;
 
-import fes.aragon.inter.Pila;
 import fes.aragon.dinamicas.ListaSimple;
+import fes.aragon.inter.Pila;
 
-public class PilaLista <E> implements Pila <E> {
+/**
+ *
+ * @author theni
+ */
+public class PilaLista<E> implements Pila<E>{
     private ListaSimple pila=new ListaSimple();
-    // Con el limite se cambia la naturaleza de la pila.
-    private int longitud = 10;
-
+    private int longitud=10;
+    
     public PilaLista(int longitud) {
-        this.longitud = longitud;
+        this.longitud=longitud;
     }
 
     public int getLongitud() {
@@ -20,7 +27,7 @@ public class PilaLista <E> implements Pila <E> {
     public void setLongitud(int longitud) {
         this.longitud = longitud;
     }
-    
+
     @Override
     public void borrar() {
         pila=new ListaSimple();
@@ -33,19 +40,18 @@ public class PilaLista <E> implements Pila <E> {
 
     @Override
     public void insertar(E dato) {
-    //Si añade la longitud
-    if (pila.getLongitud()< longitud){
-    pila.agregarEnCabeza(dato);
-    }else{
-          System.out.println("Pila Llena");
-         }
+        if(pila.getLongitud()<longitud){
+        pila.agregarEnCabeza(dato);
+        } else{
+            System.out.println("Pila Llena");
+        }
     }
 
     @Override
     public E extraer() {
         return (E)pila.eliminarEnCabeza();
     }
-
+    
     @Override
     public E elementoSuperior() {
         Object tmp=pila.eliminarEnCabeza();
@@ -53,11 +59,3 @@ public class PilaLista <E> implements Pila <E> {
         return (E)tmp;
     }
 }
-
-   
-
-    
-
-   
-    
-
